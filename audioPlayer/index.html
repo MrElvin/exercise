@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div id="audio">
+        <audio src="./song/Faded.mp3">您的浏览器不支持HTML5的audio属性，请升级浏览器</audio>
+    </div>
+    <div class="container">
+        <div class="left">
+            <p class="song-title">成都</p>
+            <p class="song-author">赵雷</p>
+            <div class="control">
+                <p class="time-guide">
+                    <span class="time-now">00:00</span> /
+                    <span class="time-total">00:00</span>
+                </p>
+                <div class="volume-control">
+                    <button type="button" class="volume-btn">
+                        <span class="glyphicon glyphicon-volume-up"></span>
+                    </button>
+                    <div class="volume-progress">
+                        <div class="volume-progress-now">
+                        </div>
+                        <div class="volume-progress-guider">
+                        </div>
+                        <div class="volume-progress-total">
+                        </div>
+                    </div>
+                </div>
+                <div class="file-control">
+                    <button type="button" class="random-btn">
+                        <span class="glyphicon glyphicon-retweet"></span>
+                    </button>
+                    <button type="button" class="upload-btn">
+                        <span class="glyphicon glyphicon-cloud-upload"></span>
+                    </button>
+                    <button type="button" class="download-btn">
+                        <span class="glyphicon glyphicon-cloud-download"></span>
+                    </button>
+                    <button type="button" class="loop-btn">
+                        <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </div>
+                <div class="song-progress-bar">
+                    <div class="song-progress-now">
+
+                    </div>
+                    <div class="song-progress-total">
+
+                    </div>
+                    <div class="song-progress-guider">
+
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <button type="button" class="love">
+                        <span class="glyphicon glyphicon-heart-empty"></span>
+                    </button>
+                    <button type="button" class="delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </div>
+                <div class="bottom-right">
+                    <button type="button" class="next-btn">
+                        <span class="glyphicon glyphicon-step-forward"></span>
+                    </button>
+                    <button type="button" class="play-btn">
+                        <span class="glyphicon glyphicon-play"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./images/alan-walker.jpg" alt="cd-cover" class="cd-cover">
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
