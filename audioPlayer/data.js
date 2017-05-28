@@ -3,16 +3,16 @@ let musicArray = [
         'id': 0,
         'author': 'Alan Walker',
         'name': 'Faded',
-        'image': '/exercise/audioPlayer/images/alan-walker.jpg',
-        'song': '/exercise/audioPlayer/song/Faded.mp3',
+        'image': './exercise/audioPlayer/images/alan-walker.jpg',
+        'song': './exercise/audioPlayer/song/Faded.mp3',
         'isLove': false
     },
     {
         'id': 1,
         'author': '赵雷',
         'name': '成都',
-        'image': '/exercise/audioPlayer/images/zhaolei.jpg',
-        'song': '/exercise/audioPlayer/song/成都.mp3',
+        'image': './exercise/audioPlayer/images/zhaolei.jpg',
+        'song': './exercise/audioPlayer/song/成都.mp3',
         'isLove': false
     },
     {
