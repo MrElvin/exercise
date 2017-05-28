@@ -43,8 +43,8 @@ let musicArray = [
         'id': 5,
         'author': 'Fefe Dobson',
         'name': 'Stuttering',
-        'image': '/exercise/audioPlayer/images/Stuttering.jpg',
-        'song': '/exercise/audioPlayer/song/Stuttering.mp3',
+        'image': '/exercise/audioPlayer/images/stuttering.jpg',
+        'song': '/exercise/audioPlayer/song/stuttering.mp3',
         'isLove': false
     },
     {
