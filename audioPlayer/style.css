@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: default;
+    background: #f2f2f2;
+}
+
+#audio {
+    width: 600px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    display: none;
+}
+
+.container {
+    width: 800px;
+    height: 280px;
+    box-shadow: 0 0 3px #ccc;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.left {
+    width: 480px;
+    height: 260px;
+    float: left;
+}
+
+.song-title {
+    font-family: 'Microsoft Yahei';
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+
+.song-author {
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    position: absolute;
+    left: 16px;
+    top: 60px;
+}
+
+.control {
+    width: 440px;
+    height: 60px;
+    position: absolute;
+    top: 100px;
+}
+
+.time-guide {
+    font-family: 'Microsoft Yahei';
+    color: #000;
+    font-size: 12px;
+    position: absolute;
+    left: 1px;
+}
+
+.volume-control {
+    position: absolute;
+    left: 90px;
+    top: -1px;
+}
+
+.volume-progress {
+    width: 29px;
+    height: 80px;
+    background: #f9f9f9;
+    box-shadow: 0 0 3px #ddd;
+    position: absolute;
+    left: -9px;
+    top: -80px;
+    display: none;
+}
+
+.volume-progress-total {
+    width: 1px;
+    height: 64px;
+    background: #ddd;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    z-index: 1;
+    cursor: default;
+}
+
+.volume-progress-now {
+    width: 1px;
+    height: 32px;
+    background: #5bc0de;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+    cursor: default;
+}
+
+.volume-progress-guider {
+    width: 7px;
+    height: 7px;
+    background: #5bc0de;
+    border-radius: 7px;
+    position: absolute;
+    z-index: 3;
+    bottom: 28px;
+    left: -3px;
+    cursor: default;
+}
+
+.volume-btn {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.file-control button {
+    float: right;
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 14px;
+    margin-top: 1px;
+}
+
+.file-control .download-btn a {
+    color: #000;
+}
+
+.file-control button span {
+    font-size: 16px;
+}
+
+.song-progress-bar {
+    position: absolute;
+    top: 24px;
+    width: 440px;
+    height: 11px;
+}
+
+.song-progress-total {
+    width: 440px;
+    height: 1px;
+    background: #ccc;
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+}
+
+.song-progress-now {
+    width: 0px;
+    height: 1px;
+    background: #5bc0de;
+    position: absolute;
+    z-index: 2;
+}
+
+.song-progress-guider {
+    width: 5px;
+    height: 5px;
+    border-radius: 9px;
+    background-color: #5bc0de;
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    display: none;
+}
+
+.bottom {
+    width: 440px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.bottom button {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+.bottom-left {
+    float: left;
+}
+
+.bottom-right {
+    float: right;
+}
+
+.bottom-right button {
+    float: right;
+}
+
+.right {
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    box-shadow: 0 0 6px #aaa;
+}
+
+.right img {
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+}
+
+.upload-input {
+    visibility: hidden;
+}
+
+#delete-div {
+    display: none;
+    width: 800px;
+    height: 280px;
+    line-height: 280px;
+    z-index: 100;
+    font-family: 'Microsoft Yahei';
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 3px #ccc;
+    background: #f2f2f2;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}

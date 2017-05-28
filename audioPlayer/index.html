@@ -12,10 +12,14 @@
     <div id="audio">
         <audio src="./song/Faded.mp3">您的浏览器不支持HTML5的audio属性，请升级浏览器</audio>
     </div>
+    <input type="file" class="upload-input">
+    <div id="delete-div">
+        已经没有音乐可以播放了 :(
+    </div>
     <div class="container">
         <div class="left">
-            <p class="song-title">成都</p>
-            <p class="song-author">赵雷</p>
+            <p class="song-title"></p>
+            <p class="song-author"></p>
             <div class="control">
                 <p class="time-guide">
                     <span class="time-now">00:00</span> /
@@ -26,11 +30,11 @@
                         <span class="glyphicon glyphicon-volume-up"></span>
                     </button>
                     <div class="volume-progress">
-                        <div class="volume-progress-now">
-                        </div>
-                        <div class="volume-progress-guider">
-                        </div>
                         <div class="volume-progress-total">
+                            <div class="volume-progress-now">
+                            </div>
+                            <div class="volume-progress-guider">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,21 +46,20 @@
                         <span class="glyphicon glyphicon-cloud-upload"></span>
                     </button>
                     <button type="button" class="download-btn">
-                        <span class="glyphicon glyphicon-cloud-download"></span>
+                        <a download="" href="">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
                     </button>
                     <button type="button" class="loop-btn">
                         <span class="glyphicon glyphicon-arrow-right"></span>
                     </button>
                 </div>
                 <div class="song-progress-bar">
-                    <div class="song-progress-now">
-
-                    </div>
                     <div class="song-progress-total">
-
-                    </div>
-                    <div class="song-progress-guider">
-
+                        <div class="song-progress-now">
+                        </div>
+                        <div class="song-progress-guider">
+                        </div>
                     </div>
                 </div>
             </div>
