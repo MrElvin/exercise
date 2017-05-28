@@ -3,8 +3,8 @@ let musicArray = [
         'id': 0,
         'author': 'Alan Walker',
         'name': 'Faded',
-        'image': './audioPlayer/images/alan-walker.jpg',
-        'song': './audioPlayer/song/Faded.mp3',
+        'image': '/audioPlayer/images/alan-walker.jpg',
+        'song': '/audioPlayer/song/Faded.mp3',
         'isLove': false
     },
     {
