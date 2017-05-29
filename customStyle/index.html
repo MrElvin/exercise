@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义样式</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="checkbox-custom-container">
+        <div class="pseudo-container">
+            <h1 class="pseudo-title">伪类实现</h1>
+            <div class="pseudo-checkbox">
+                <input type="checkbox" id="check-pseudo">
+                <label for="check-pseudo"></label>
+            </div>
+            <div class="pseudo-radio">
+                <input type="radio" id="radio-pseudo-male" name="gender-pseudo">
+                <label for="radio-pseudo-male"></label>
+                <input type="radio" id="radio-pseudo-female" name="gender-pseudo">
+                <label for="radio-pseudo-female"></label>
+            </div>
+        </div>
+
+        <div class="sprite-container">
+            <h1 class="sprite-title">雪碧图实现</h1>
+            <div class="sprite-checkbox">
+                <input type="checkbox" id="check-sprite">
+                <label for="check-sprite"></label>
+            </div>
+            <div class="sprite-radio">
+                <input type="radio" id="radio-sprite-male" name="gender-sprite">
+                <label for="radio-sprite-male"></label>
+                <input type="radio" id="radio-sprite-female" name="gender-sprite">
+                <label for="radio-sprite-female"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="context-custom-container">
+        <h1 class="context-title">自定义右键菜单</h1>
+        
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="javascript:;">menu item 1</a></li>
+            <li><a href="javascript:;">menu item 2</a></li>
+            <li><a href="javascript:;">menu item 3</a></li>
+            <li><a href="javascript:;">menu item 4</a></li>
+        </ul>
+    </div>
+
+    <div class="fold-custom-container">
+        <h1 class="fold-title">自定义折叠面板</h1>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
