@@ -206,3 +206,70 @@ label[for="radio-sprite-female"] {
     border-bottom: none;
 }
 
+/***************** custom fold bar ********************/
+.fold-custom-container {
+    width: 100%;
+    height: 560px;
+    background-color: #F5FFFA;
+}
+
+.fold-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 30px;
+}
+
+.fold-custom-container input {
+    display: none;
+}
+
+.fold-custom-container label {
+    cursor: pointer;
+}
+
+.fold-item {
+    width: 800px;
+    margin-left: 30px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px #ccc;
+}
+
+.fold-item label {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+    color: #555;
+}
+
+.fold-item div {
+    font-size: 14px;
+    color: #333;
+    transition: all .5s;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.fold-item div p {
+    margin: 20px 30px;
+    text-align: justify;
+}
+
+.fold-item input:checked+label+div {
+    visibility: visible;
+    height: 160px;
+}
+
+.fold-item input:checked+label {
+    border-bottom: 1px solid #ccc;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
