@@ -2,7 +2,7 @@
 
 该demo实现了如下图所示的Loading动画，使用CSS3实现。
 
-![loading动画](/loading.gif)
+![loading动画](./loading.gif)
 
 ### Loading效果实现思路
 
@@ -54,17 +54,17 @@
 
 效果如图，比较辣眼睛。。。。。
 
-![效果一](/demo1.png)
+![效果一](./demo1.png)
 
 下面仔细说明一下，为啥上面的几行CSS代码就能搞出这个东西嘞，一句一句来看。
 
 首先对 `bg` 的样式定义使得浏览器中渲染出来了一个麦芽色的圆形。
 
-![效果二](/demo2.png)
+![效果二](./demo2.png)
 
 之后对 `sector1` 和 `sector2` 的样式定义，使得浏览器中变成了这个样子。。
 
-![效果三](/demo3.png)
+![效果三](./demo3.png)
 
 这里需要仔细说明一下，css3 中的`clip` 属性，该属性会裁剪 **绝对定位** 元素，该属性规定元素的可显示区域，这样元素的部分内容就会被裁剪掉。`clip` 属性值，`rect(top, right, bottom, left)` 指定一个剪裁矩形，会把不属于该矩形内的元素部分咔嚓掉。说到这里，可以知道上图显示的灰色区域其实是 `sector1` 和 `sector2` 的重叠部分（此时的 `sector1` 和 `sector2` 完全重叠，都是一个灰色的左半圆形状）。
 
@@ -85,6 +85,6 @@
 
 为了解释方便，将颜色表述为暗色和亮色，动画的关键帧如下图所示。
 
-![keyframe](/keyframe.png)
+![keyframe](./keyframe.png)
 
 按照关键帧，去分别设置 `sector` ，`secter::before` 和 `sector::after` 的 `animation` 中应用到的 `@keyframes`  就可以啦。
