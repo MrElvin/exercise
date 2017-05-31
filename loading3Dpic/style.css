@@ -23,17 +23,6 @@
     transform: translate(-50%, -50%);
 }
 
-.sector::before,
-.sector::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transform: rotate(0deg);
-    clip: rect(0px, 20px, 40px, 0px);
-}
-
 .loading-outer {
     width: 100px;
     height: 100px;
@@ -54,9 +43,20 @@
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    margin-top: -20px;
-    margin-left: -20px;
+    margin-top: -19px;
+    margin-left: -19px;
     animation: sector-rotate 3s infinite linear;
+}
+
+.sector::before,
+.sector::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    clip: rect(0px, 20px, 40px, 0px);
 }
 
 .sector::before {
