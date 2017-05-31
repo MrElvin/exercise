@@ -74,7 +74,7 @@
 
 **2. 动画效果实现**
 
-总算可以画出扇形了，下面来看看怎么做出这个Loading动画（我觉得我的实现方式并不很好，比较愚蠢。。。）
+总算可以画出扇形了，下面来看看怎么做出这个Loading动画（以下是我的实现方式，可能会比较麻烦，因为在做的时候我也绕了很久。。感觉都要这个loading动画转晕了:sweat_smile:）
 
 ```Html
 <!-- 外圈动画 -->
@@ -87,4 +87,4 @@
 
 ![keyframe](./keyframe.png)
 
-按照关键帧，去分别设置 `sector` ，`secter::before` 和 `sector::after` 的 `animation` 中应用到的 `@keyframes`  就可以啦。
+按照关键帧，分别去设置 `sector` ，`secter::before` 和 `sector::after` 的 `animation` 中应用到的 `@keyframes`  就可以啦。
