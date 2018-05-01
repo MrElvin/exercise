@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: ivory;
+    }
+    .img-rotate {
+      width: 250px;
+      height: 350px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -200px 0 0 -125px;
+      transition: all 1s;
+      perspective: 100px;
+      transform-style: preserve-3d;
+    }
+    .img-rotate:hover {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      width: 250px;
+      height: 350px;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .front {
+      background: url('./images/front.jpg') no-repeat center center;
+    }
+    .back {
+      background: url('./images/back.jpg') no-repeat center center;
+      transform: rotateY(180deg);
+    }
+  </style>
+  <title>card-rotate</title>
+</head>
+<body>
+  <div class="img-rotate">
+    <div class="front"></div>
+    <div class="back"></div>
+  </div>
+</body>
+</html>
