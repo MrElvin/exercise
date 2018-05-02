@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      box-sizing: border-box;
+      padding-top: 20%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: ivory;
+      perspective: 1200px;
+      perspective-origin: 50% 60%;
+    }
+    .cube {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      transform-style: preserve-3d;
+      transform: rotateX(330deg) rotateY(0deg);
+    }
+    .cube:hover {
+      animation: cubeRotate 5s linear infinite;
+    }
+    .cube > div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      opacity: 0.7;
+      background: lightsalmon;
+      line-height: 200px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      user-select: none;
+      outline: 1px solid salmon;
+    }
+    .cube > div:first-child {
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .cube > div:nth-child(2) {
+      transform: translateZ(100px);
+    }
+    .cube > div:nth-child(3) {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .cube > div:nth-child(4) {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+    .cube > div:nth-child(5) {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    .cube > div:nth-child(6) {
+      transform: rotateX(90deg) rotateY(180deg) translateZ(100px);
+    }
+    @keyframes cubeRotate {
+      from { transform: rotateX(330deg) rotateY(0deg); }
+      to { transform: rotateX(330deg) rotateY(360deg); }
+    }
+  </style>
+  <title>cube-rotate</title>
+</head>
+<body>
+  <div class="cube">
+    <div class="side">1</div>
+    <div class="side">2</div>
+    <div class="side">3</div>
+    <div class="side">4</div>
+    <div class="side">5</div>
+    <div class="side">6</div>
+  </div>
+</body>
+</html>
