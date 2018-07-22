@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  width: 1200px;
+  height: 600px;
+  border: 2px solid deepskyblue;
+  display: flex;
+}
+.restaurant {
+  width: 80%;
+  height: 100%;
+  display: flex;
+}
+.console {
+  width: 20%;
+  height: 100%;
+  background: skyblue;
+  display: flex;
+  flex-direction: column;
+}
+.console .name,
+.console .money {
+  width: 100%;
+  border-bottom: 2px solid deepskyblue;
+  color: white;
+  line-height: 32px;
+  box-sizing: border-box;
+  padding: 4px;
+}
+.info {
+  box-sizing: border-box;
+  padding: 4px;
+  overflow: auto;
+}
+.info p {
+  line-height: 32px;
+  margin-bottom: 4px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: lightblue;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+  background-color: lightskyblue;
+}
+.restaurant div {
+  width: 33.333333%;
+  height: 100%;
+  background: white;
+  position: relative;
+}
+.cook {
+  border-right: 2px dashed skyblue;
+}
+.waiter {
+  border-right: 2px dashed skyblue;
+}
+.cook img {
+  height: 100px;
+}
+.waiter img {
+  height: 100px;
+}
+.customer img {
+  height: 100px;
+}
