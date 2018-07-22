@@ -6,6 +6,8 @@ Module.module('Util', () => {
       var p = new F()
       p.constructor = subClass
       subClass.prototype = p
-    }
+    },
+    TIME: 1000,
+    MAXORDERDISHES: 4
   }
 })
