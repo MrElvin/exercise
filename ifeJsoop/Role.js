@@ -6,12 +6,13 @@ Module.module('Role', ['Util'], (Util) => {
     this.menu = params.menu || []
     this.customerQueue = params.customerQueue || []
     this.hire = function (employee) {
-      console.log('雇佣：' + employee.name)
+      Util.log('雇佣：' + employee.name)
+      Util.changeMoney(-employee.salary)
       this.staff.push(employee)
       return this
     }
     this.fire = function (employee) {
-      console.log('解雇： ' + employee.name)
+      Util.log('解雇： ' + employee.name)
       this.staff = this.staff.filter(function (item) {
         return item.id !== employee.id
       })
@@ -35,12 +36,32 @@ Module.module('Role', ['Util'], (Util) => {
         return Promise.resolve(dishes)
       }
       this.giveCook = function (dishes) {
-        console.log('已经下单到后厨！！！')
-        return Promise.resolve(dishes)
+        let name = dishes.map(dish => dish.name).join(', ')
+        let money = dishes.reduce((total, curr) => total - curr.cost, 0)
+        Util.waiterMove('serve')
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            Util.log('顾客点了' + name)
+            Util.log('已经下单到后厨！！！')
+            Util.changeMoney(money)
+            Util.waiterMove('clearMove')
+            resolve(dishes)
+          }, 1000);
+        })
+      }
+      this.welcome = function () {
+        Util.waiterMove('wel')
+        return Promise.resolve()
       }
       this.serve = function (dish) {
-        console.log('为顾客上' + dish.name)
-        return Promise.resolve(dish)
+        Util.waiterMove('serve')
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            Util.log('为顾客上' + dish.name)
+            Util.waiterMove('clearMove')
+            resolve(dish)
+          }, 1000);
+        })
       }
     }
     Util.inherit(WaiterFunc, Employee)
@@ -57,13 +78,12 @@ Module.module('Role', ['Util'], (Util) => {
     let CookFunc = function (name, salary) {
       Employee.call(this, name, salary)
       this.cookDishes = function (dishes) {
-        // console.log(dishes)
         let promises = dishes.map((dish) => {
           return function () {
-            console.log('正在烹饪' + dish.name + '...')
+            Util.log('正在烹饪' + dish.name + '...')
             return new Promise((resolve, reject) => {
               setTimeout(() => {
-                console.log(dish.name + '烹饪完成！！！')
+                Util.log(dish.name + '烹饪完成！！！')
                 resolve(dish)
               }, dish.useTime * Util.TIME)
             })
@@ -86,7 +106,6 @@ Module.module('Role', ['Util'], (Util) => {
 
   let Customer = function (name) {
     let dishesToEatPromises = []
-    let haveEatenCount = 0
     this.name = name
     this.status = '闲坐中...'
     this.orderDishes = []
@@ -105,11 +124,11 @@ Module.module('Role', ['Util'], (Util) => {
     this.eat = function (dish) {
       this.status = '吃饭中...'
       let p = function () {
-        console.log('正在享用' + dish.name + '...')
+        Util.log('正在享用' + dish.name + '...')
         arguments.callee.isResolved = true
         return new Promise((resolve, reject) => {
           setTimeout(() => {
-            console.log(dish.name + '吃完啦！！！')
+            Util.log(dish.name + '吃完啦！！！')
             this.status = '等餐中...'
             resolve()
           }, 3 * Util.TIME)
@@ -119,16 +138,18 @@ Module.module('Role', ['Util'], (Util) => {
       dishesToEatPromises.push(p)
       return dishesToEatPromises
         .filter(promise => !promise.isResolved)
-        .reduce((a, b) => a.then(b)
-          .then(() => {
-            haveEatenCount++
-            return Promise.resolve(haveEatenCount)
-          })
-          , Promise.resolve())
+        .reduce((a, b) => a.then(b), Promise.resolve())
     }
-    this.sit = function () { console.log('我坐下啦！！！') }
+    this.sit = function () {
+      Util.log('我坐下啦！！！')
+      Util.customerMove('in')
+      return Promise.resolve()
+    }
     this.payAndLeave = function () {
-      console.log(this.name + '买单离店啦！！！')
+      Util.customerMove('out')
+      Util.log(this.name + '买单离店啦！！！')
+      let money = this.orderDishes.reduce((total, curr) => total + curr.price, 0)
+      Util.changeMoney(money)
       return Promise.resolve()
     }
   }
