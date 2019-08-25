@@ -14,9 +14,9 @@ Module.module(['Role', 'Util'], function (Role, Util) {
     customerQueue: [
       new Role.Customer('Lina'),
       new Role.Customer('Elvin'),
-      // new Role.Customer('Elaie'),
-      // new Role.Customer('Byue'),
-      // new Role.Customer('Melon'),
+      new Role.Customer('Elaie'),
+      new Role.Customer('Byue'),
+      new Role.Customer('Melon'),
     ]
   })
 
